@@ -18,7 +18,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="text-center mt-5 mb-5"><button onClick={handleGoogleSignIn} className="btn btn-danger">Log in With Google Account!</button> </div>
+            <div className="text-center mt-5 mb-5"><button onClick={handleGoogleSignIn} className="btn btn-primary"> <span><i style={{ fontSize: '30px', color: 'white' }} className="fab fa-google"></i></span> <span style={{ fontSize: '25px', color: 'white' }} >Log in With Google Account!</span></button> </div>
         </div>
     );
 };

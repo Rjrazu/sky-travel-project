@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
@@ -17,87 +17,83 @@ const Header = () => {
     const logoStyle = {
         width: '190px',
     }
+    const navStyle = {
+        fontWeight: '500',
+        fontSize: '18px',
+        textDecoration: 'none',
+        marginRight: '15px'
+    }
+    const activeStyle = {
+        fontWeight: "bold",
+        color: "red"
+    }
     return (
         <div>
-            <Navbar bg="dark" expand="lg">
+            <Navbar bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand href="#"><img style={logoStyle} src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle className="bg-white" aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
-                            className="ms-auto my-3 my-lg-0"
+                            className="ms-auto d-flex justify-content-center align-items-center my-3 my-lg-0"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
                             <NavLink
                                 to="/home"
-                                style={{
-                                    fontWeight: '500',
-                                    fontSize: '20px',
-                                    textDecoration: 'none',
-                                    marginRight: '20px'
-                                }}
-                                activeStyle={{
-                                    fontWeight: "bold",
-                                    color: "red"
-                                }}
+                                style={navStyle}
+                                activeStyle={activeStyle}
                             >
                                 Home
                             </NavLink>
                             <NavLink
                                 to="/packages"
-                                style={{
-                                    fontWeight: '500',
-                                    fontSize: '20px',
-                                    textDecoration: 'none',
-                                    marginRight: '20px'
-                                }}
-                                activeStyle={{
-                                    fontWeight: "bold",
-                                    color: "red"
-                                }}
+                                style={navStyle}
+                                activeStyle={activeStyle}
                             >
                                 Packages
                             </NavLink>
-                            <NavLink
-                                to="/addservice"
-                                style={{
-                                    fontWeight: '500',
-                                    fontSize: '20px',
-                                    textDecoration: 'none',
-                                    marginRight: '20px'
-                                }}
-                                activeStyle={{
-                                    fontWeight: "bold",
-                                    color: "red"
-                                }}
+                            {user?.uid ? <NavLink
+                                to="/my_packages"
+                                style={navStyle}
+                                activeStyle={activeStyle}
                             >
-                                Add Service
+                                My Packages
+                            </NavLink> : <></>}
+                            <NavLink
+                                to="/feedback"
+                                style={navStyle}
+                                activeStyle={activeStyle}
+                            >
+                                Feedback
                             </NavLink>
                             <NavLink
-                                to="/blog"
-                                style={{
-                                    fontWeight: '500',
-                                    fontSize: '20px',
-                                    textDecoration: 'none',
-                                    marginRight: '20px'
-                                }}
-                                activeStyle={{
-                                    fontWeight: "bold",
-                                    color: "red"
-                                }}
+                                to="/contact"
+                                style={navStyle}
+                                activeStyle={activeStyle}
                             >
-                                Blogs
+                                Contact
                             </NavLink>
+                            {user?.uid
+                                ?
+                                <NavDropdown title={<span > <img src={user?.photoURL} alt="" style={{ width: '50px', height: '50px', borderRadius: "50%" }} /> </span>} id="navbarScrollingDropdown">
+                                    <NavDropdown.Item>
+                                        <div>
+                                            <h6 className="mb-3"><i className="bg-danger fas fa-address-card"></i> {user?.displayName}</h6>
+                                            <NavLink
+                                                to="/admin"
+                                                style={navStyle}
+                                                activeStyle={activeStyle}
+                                            >
+                                                Control Panel
+                                            </NavLink> <br /> <br /><br />
+                                            <Button onClick={logOut} variant="danger">Logout</Button>
+                                        </div></NavDropdown.Item>
+                                </NavDropdown>
+                                :
+                                <Button onClick={handleLoginButton} variant="success">Login</Button>}
                         </Nav>
-                        {user?.email
-                            ?
-                            <div>
-                                <h5 className=" d-inline text-white me-2">{user?.displayName}</h5>
-                                <Button onClick={logOut} variant="success">Logout</Button>
-                            </div>
-                            :
-                            <Button onClick={handleLoginButton} variant="success">Login</Button>}
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

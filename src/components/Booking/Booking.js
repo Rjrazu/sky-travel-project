@@ -2,19 +2,37 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import axios from 'axios';
+import useAuth from '../../hooks/useAuth';
 
 const Booking = () => {
+    const { user } = useAuth()
+    const { uid } = user;
     const { id } = useParams();
     const [pack, setPack] = useState({})
+
+    const newPack = { ...pack, uid }
+
     useEffect(() => {
         fetch(`http://localhost:5000/packages/${id}`)
             .then(res => res.json())
             .then(data => setPack(data))
-    }, [id])
+    }, [id]);
+
+
+    const handleOrder = (packages) => {
+        axios.post('http://localhost:5000/pack/add', packages)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('added successfully');
+                }
+            })
+    }
 
     return (
         <div className="container mt-5 mb-5 p-3 shadow">
             <Container>
+
                 <Row>
                     <Col lg={8}>
                         <img src={pack.image} className="img-fluid rounded-3" alt="" /> <br />
@@ -25,6 +43,9 @@ const Booking = () => {
                     </Col>
                     <Col className="text-center" lg={4}>
                         <h3>Booking</h3>
+                        <div className="add-service">
+                            <button onClick={() => handleOrder(newPack)}>Order</button>
+                        </div>
                     </Col>
                 </Row>
             </Container>
