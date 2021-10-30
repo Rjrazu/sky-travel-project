@@ -14,6 +14,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Feedback from './components/Feedback/Feedback';
 import AuthProvider from './Context/AuthProvider';
 import Admin from './components/Admin/Admin';
+import AllAddedPack from './components/AllAddedPack/AllAddedPack';
 
 function App() {
   return (
@@ -37,8 +38,11 @@ function App() {
             <Route exact path="/feedback">
               <Feedback></Feedback>
             </Route>
-            <PrivateRoute exact path="/addpackage">
+            <PrivateRoute exact path="/add_package">
               <AddPackage></AddPackage>
+            </PrivateRoute>
+            <PrivateRoute exact path="/all_package">
+              <AllAddedPack></AllAddedPack>
             </PrivateRoute>
             <PrivateRoute exact path="/admin">
               <Admin></Admin>

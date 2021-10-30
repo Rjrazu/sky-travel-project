@@ -29,7 +29,7 @@ const Header = () => {
     }
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="dark" expand="lg">
                 <Container>
                     <Navbar.Brand href="#"><img style={logoStyle} src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle className="bg-white" aria-controls="navbarScroll" />
@@ -53,13 +53,6 @@ const Header = () => {
                             >
                                 Packages
                             </NavLink>
-                            {user?.uid ? <NavLink
-                                to="/my_packages"
-                                style={navStyle}
-                                activeStyle={activeStyle}
-                            >
-                                My Packages
-                            </NavLink> : <></>}
                             <NavLink
                                 to="/feedback"
                                 style={navStyle}
@@ -74,24 +67,35 @@ const Header = () => {
                             >
                                 Contact
                             </NavLink>
+                            {user?.uid ?
+                                <div>
+                                    <NavLink
+                                        to="/my_packages"
+                                        style={navStyle}
+                                        activeStyle={activeStyle}
+                                    >
+                                        My Packages
+                                    </NavLink>
+                                    <NavLink
+                                        to="/admin"
+                                        style={navStyle}
+                                        activeStyle={activeStyle}
+                                    >
+                                        Admin Panel
+                                    </NavLink> </div> : <></>}
                             {user?.uid
                                 ?
                                 <NavDropdown title={<span > <img src={user?.photoURL} alt="" style={{ width: '50px', height: '50px', borderRadius: "50%" }} /> </span>} id="navbarScrollingDropdown">
                                     <NavDropdown.Item>
                                         <div>
                                             <h6 className="mb-3"><i className="bg-danger fas fa-address-card"></i> {user?.displayName}</h6>
-                                            <NavLink
-                                                to="/admin"
-                                                style={navStyle}
-                                                activeStyle={activeStyle}
-                                            >
-                                                Control Panel
-                                            </NavLink> <br /> <br /><br />
                                             <Button onClick={logOut} variant="danger">Logout</Button>
                                         </div></NavDropdown.Item>
                                 </NavDropdown>
                                 :
                                 <Button onClick={handleLoginButton} variant="success">Login</Button>}
+
+
                         </Nav>
 
                     </Navbar.Collapse>
