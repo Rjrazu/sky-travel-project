@@ -3,7 +3,7 @@ import { Card, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 
 const Package = ({ pack }) => {
-    const { _id, name, image } = pack;
+    const { _id, name, image, description, cost, time } = pack;
     const history = useHistory();
 
     const handleCard = () => {
@@ -25,9 +25,11 @@ const Package = ({ pack }) => {
                     <Card.Img variant="top" className="" style={{ maxWidth: '480px', height: '250px' }} src={image} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
-                        <p>Add Package</p>
+                        <p>{description.slice(0, 100)}</p>
+                        <Card.Title> <span className="text-danger"><i className="fas fa-angle-double-right"></i></span> Cost : BDT {cost}</Card.Title>
+                        <p>{time}</p>
                     </Card.Body>
-                    <button className="btn btn-danger" onClick={handleCard}> Booking Now</button>
+                    <button className="btn btn-danger" onClick={handleCard}> Book Now</button>
                 </Card>
             </Col>
         </div>

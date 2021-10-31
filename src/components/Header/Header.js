@@ -13,11 +13,13 @@ const Header = () => {
         history.push('/login')
     }
 
-    const logo = 'https://i.ibb.co/XZbgJ8f/Group-1329.png';
+    const logo = 'https://i.ibb.co/3m61xyh/logo.jpg';
     const logoStyle = {
-        width: '190px',
+        width: '160px',
+        borderRadius: '10px'
     }
     const navStyle = {
+        color: 'cyan',
         fontWeight: '500',
         fontSize: '18px',
         textDecoration: 'none',
@@ -31,12 +33,12 @@ const Header = () => {
         <div>
             <Navbar bg="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#"><img style={logoStyle} src={logo} alt="" /></Navbar.Brand>
+                    <Navbar.Brand href="/home"><img style={logoStyle} src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle className="bg-white" aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
                             className="ms-auto d-flex justify-content-center align-items-center my-3 my-lg-0"
-                            style={{ maxHeight: '100px' }}
+                            style={{ maxHeight: '250px' }}
                             navbarScroll
                         >
                             <NavLink
@@ -68,21 +70,23 @@ const Header = () => {
                                 Contact
                             </NavLink>
                             {user?.uid ?
-                                <div>
-                                    <NavLink
-                                        to="/my_packages"
-                                        style={navStyle}
-                                        activeStyle={activeStyle}
-                                    >
-                                        My Packages
-                                    </NavLink>
-                                    <NavLink
-                                        to="/admin"
-                                        style={navStyle}
-                                        activeStyle={activeStyle}
-                                    >
-                                        Admin Panel
-                                    </NavLink> </div> : <></>}
+                                <NavLink
+                                    to="/my_packages"
+                                    style={navStyle}
+                                    activeStyle={activeStyle}
+                                >
+                                    My Packages
+                                </NavLink>
+                                : <></>}
+                            {user?.uid ?
+                                <NavLink
+                                    to="/admin"
+                                    style={navStyle}
+                                    activeStyle={activeStyle}
+                                >
+                                    Admin Panel
+                                </NavLink>
+                                : <></>}
                             {user?.uid
                                 ?
                                 <NavDropdown title={<span > <img src={user?.photoURL} alt="" style={{ width: '50px', height: '50px', borderRadius: "50%" }} /> </span>} id="navbarScrollingDropdown">

@@ -18,7 +18,7 @@ const Dashboard = () => {
 
     return (
         <div className="container mt-5 mb-5">
-            <h2 className="text-center mb-3">Total Added Services {packs.length}</h2>
+            <h3 className="text-center mb-4">My Added Packages</h3>
             <Row xs={1} md={2} lg={4} className="g-4">
                 {
                     packs.map(pack => <AddedPack

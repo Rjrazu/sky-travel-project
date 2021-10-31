@@ -36,15 +36,15 @@ const Booking = () => {
                 <Row>
                     <Col lg={8}>
                         <img src={pack.image} className="img-fluid rounded-3" alt="" /> <br />
-                        <h5>{pack.time}</h5>
                         <h2>{pack.name}</h2>
                         <h4>Total Cost : BDT {pack.cost} </h4>
+                        <h5>{pack.time}</h5>
                         <h6>{pack.description}</h6>
                     </Col>
                     <Col className="text-center" lg={4}>
-                        <h3>Booking</h3>
+                        <h2>Booking</h2>
                         <div className="add-service">
-                            <button onClick={() => handleOrder(newPack)}>Order</button>
+                            <button className="btn btn-success" onClick={() => handleOrder(newPack)}>Order Now</button>
                         </div>
                     </Col>
                 </Row>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
 const AddedPack = (props) => {
-    const { _id, name, image } = props.pack;
+    const { _id, name, image, cost } = props.pack;
 
     // Delete Pack
     const handleDelete = (id) => {
@@ -36,10 +36,10 @@ const AddedPack = (props) => {
                     <Card.Img variant="top" className="" style={{ maxWidth: '480px', height: '250px' }} src={image} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
-                        <p>Remove Package</p>
+                        <p>Cost : BDT {cost}</p>
                     </Card.Body>
                     <div className="d-flex justify-content-center">
-                        <button className="btn btn-warning me-3" disabled > Pending</button>
+                        <button className="btn btn-danger me-3" disabled > Pending</button>
                         <button className="btn btn-danger" onClick={() => handleDelete(_id)}> Cancel</button>
                     </div>
 

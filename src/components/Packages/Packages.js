@@ -13,7 +13,7 @@ const Packages = () => {
     return (
 
         <div className="container mt-5 mb-5">
-            <h2 className="text-center mb-3">Total Services {packages.length}</h2>
+            <h2 className="text-center mb-4">Active Packages {packages.length}</h2>
             <Row xs={1} md={2} lg={4} className="g-4">
 
                 {

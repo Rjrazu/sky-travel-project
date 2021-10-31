@@ -4,6 +4,7 @@ import Packages from '../Packages/Packages';
 import Services from '../Services/Services';
 import Feedback from '../Feedback/Feedback';
 import WelcomeNote from '../WelcomeNote/WelcomeNote';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Packages></Packages>
             <Services></Services>
             <Feedback></Feedback>
+            <Contact></Contact>
         </div>
     );
 };

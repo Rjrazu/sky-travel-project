@@ -14,34 +14,37 @@ const Feedback = () => {
                                 <Carousel.Item interval={1000}>
                                     <img
                                         className="d-block w-100"
-                                        src="https://i.ibb.co/5vhwwTc/patient-doctor-gauze-mask-dark-red-blue-background-emotion-calm-tranquility-healthcare-respiratory-i.jpg"
+                                        src="https://i.ibb.co/XsdQFDT/ce586f5f6c34e99c4b1f695a6811dffcd584f949.jpg"
                                         alt="First slide"
                                     />
                                     <Carousel.Caption>
-                                        <h3 className=" bg-primary rounded-3">Ashraful Alam</h3>
-                                        <h6>Always helpful and always available. The folks at (IC) are my insurance people, for everything…cars, boats, houses and that makes my life easier. Peace of mind would be enough, but their bundled rates beat everyone else I’ve used before too..</h6>
+                                        <h3 className=" bg-primary rounded-3">Alamgir Kabir</h3>
+                                        <h6>Desirous of doing a Jain pilgrimage tour of Cox's Bazar which has many important Jain temples, I wrote to four tour operators. But only Tour My India replied positively. It was a first for them too, but they took up the challenge and worked out a plan for me.</h6>
+                                    </Carousel.Caption>
+
+                                </Carousel.Item>
+                                <Carousel.Item interval={1000}>
+                                    <img
+                                        className="d-block w-100"
+                                        src="https://i.ibb.co/Tk4QCnt/1200x627-1569603776449.jpg"
+                                        alt="First slide"
+                                    />
+                                    <Carousel.Caption>
+                                        <h3 className=" bg-primary rounded-3">Zakir Hossain</h3>
+                                        <h6>Thank you very much for all your assistance for my safe trip to Kedarnath. Your driver Mahesh was excellent. Will contact you again for my future trips.!!</h6>
                                     </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item interval={1000}>
                                     <img
                                         className="d-block w-100"
-                                        src="https://i.ibb.co/wdbt85Z/ovarian-cancer-featured-image.jpg"
-                                        alt="First slide"
-                                    />
-                                    <Carousel.Caption>
-                                        <h3 className=" bg-primary rounded-3">Zakia Hossain</h3>
-                                        <h6>This agency does a fantastic job finding me the right coverage and insurance company at a very competitive price every time my insurance renews. Very happy with them as my agent!!</h6>
-                                    </Carousel.Caption>
-                                </Carousel.Item>
-                                <Carousel.Item interval={1000}>
-                                    <img
-                                        className="d-block w-100"
-                                        src="https://i.ibb.co/Wxt3xFY/drugseeking.jpg"
+                                        src="https://i.ibb.co/XWxvqC5/8.jpg"
                                         alt="First slide"
                                     />
                                     <Carousel.Caption>
                                         <h3 className=" bg-primary rounded-3">Shuvo Ahmed</h3>
-                                        <h6>This agency does a fantastic job finding me the right coverage and insurance company at a very competitive price every time my insurance renews. Very happy with them as my agent!!</h6>
+                                        <h6>We have just got back from our long holiday around Bangladesh.
+                                            Just wanted to say how much we enjoyed our trip' how we felt so looked after and how well our driver Uday took us around.
+                                            Many thanks!</h6>
                                     </Carousel.Caption>
                                 </Carousel.Item>
 
@@ -56,27 +59,27 @@ const Feedback = () => {
 
                             <Accordion defaultActiveKey="0" flush>
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header> <h6>What is the link between cholesterol and heart disease?</h6> </Accordion.Header>
+                                    <Accordion.Header> <h6>I can book all my travel plans online, why use a professional travel planner?</h6> </Accordion.Header>
                                     <Accordion.Body>
-                                        Many years of scientific studies have shown a close relationship between cardiovascular disease and cholesterol levels. Your doctor may request a lipid profile—a test that shows the levels of LDL (bad cholesterol), HDL (good cholesterol), and triglycerides in your blood—to assess your risk for developing heart disease.
+                                        That may be true if you are looking for a flight to Chicago or a three day Ensenada cruise, but if you really want a great vacation you should get help especially when it does not cost you any more, and in some cases less. There is a difference between a “travel agent” and a “professional travel planner”  You can be a travel agent with no experience and no great knowledge of the travel industry, you just have to work for a company that can book tours, hotels and cruises. A professional travel planner has years of experience and knowledge of different places in the world, hotels, tour companies and cruises that are not necessarily the most common but may be far superior or offer things a little different. The internet is basically nothing but ads for travel.
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header> <h6>If my body makes its own cholesterol, why does my diet matter?</h6> </Accordion.Header>
+                                    <Accordion.Header> <h6>Do I have to be rich to travel the world?</h6> </Accordion.Header>
                                     <Accordion.Body>
-                                        When we measure cholesterol levels in your blood, what we see is a combination of what your body makes and what you eat. Because you cannot control how much cholesterol your body produces, other than with medications, restricting saturated fat in your diet can have a major impact on lowering your cholesterol.
+                                        The beauty of travel is that it’s accessible to everyone, in some form. You don't have to go far to experience a new culture. Plus there are several ways to make most flights affordable, whether by being flexible, searching on new websites like Skypicker and Fareness, or just by planning ahead. Know the best time to book a flight: 57 days in advance for domestic flights, 117 for international. Then again, you could just make traveling the world your 9-to-5..
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header> <h6>Should I focus on lowering my dietary cholesterol or saturated fat?</h6> </Accordion.Header>
+                                    <Accordion.Header> <h6>Where are the best places to travel alone?</h6> </Accordion.Header>
                                     <Accordion.Body>
-                                        Limiting saturated and trans fats in your diet has the biggest impact on lowering your cholesterol. Restricting fatty meats, choosing low-fat or nonfat dairy products, and avoiding butter and margarine play a major role in helping to maintain healthy cholesterol levels.
+                                        Well, we certainly don't recommend , where there's an all-but-constant reminder at every juncture that you are alone, a sad friendless figure lurking amid the glowing honeymooners. There are a few places, though, where visiting solo is a bonus, not a burden: notably cruises, yoga retreats, and treks across Bangladesh.
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="3">
-                                    <Accordion.Header> <h6> After you have a heart attack, is it too late to benefit from cholesterol-lowering drugs?</h6> </Accordion.Header>
+                                    <Accordion.Header> <h6> Is Bangladesh a good travel destination?</h6> </Accordion.Header>
                                     <Accordion.Body>
-                                        No, it’s never too late to benefit from cholesterol-lowering drugs. After you’ve had a heart attack, using cholesterol-lowering drugs such as statins may significantly lower your chances of having another heart attack or stroke. If you have not had a heart attack, but are at increased risk of heart disease or show early evidence of plaque in your arteries, a cholesterol-lowering drug may help prevent a heart attack or stroke.
+                                        One of the best in the world, with a vast variety of destinations clustered together in a single country, from the Cox's Bazar to the Brakkhmaputra. the parched landscapes and Tuscany-like city states in Rangpur or the quiet backwaters of Rajshahi. Here’s some inspiration for planning the perfect first-timer’s trip, or you can pore over the site for our Bd-based magazine.
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>

@@ -4,12 +4,13 @@ import { useForm } from 'react-hook-form';
 import './AddPackage.css'
 
 const AddPackage = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         axios.post('https://fathomless-coast-33302.herokuapp.com/packages/add', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
+                    reset();
                 }
             })
     }

@@ -31,7 +31,7 @@ const Contact = () => {
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Your Problem"
+                                placeholder="Subject"
                                 name="subject"
                                 required
                             />

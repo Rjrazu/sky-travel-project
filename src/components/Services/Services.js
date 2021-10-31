@@ -7,47 +7,48 @@ const Services = () => {
         <div className="mb-5 mt-5">
             <Container>
                 <div className="text-center">
-                    <h4 className="text-danger">Our Team</h4>
-                    <h2>OUR EXPERTS</h2>
+                    <h4 className="text-danger">Our Communications</h4>
+                    <h2>Available Transportation Services</h2>
                 </div>
                 <Row xs={2} sm={2} md={4} className="g-4">
                     <Col>
+
+
+
+
+
                         <Card className="p-3 shadow">
 
-                            <p className="text-center mt-1"><Card.Img variant="top" className="rounded" style={{ maxWidth: "250px", height: "200px" }} src="https://www.nicepng.com/png/detail/26-260551_femscare-benifits-doctor-image-png-hd.png" /></p>
+                            <p className="text-center mt-1"><Card.Img variant="top" className="rounded" style={{ maxWidth: "250px", height: "200px" }} src="https://i.ibb.co/6BDcw8z/yxcqjf6wxjxyoe5vby3e.jpg" /></p>
                             <Card.Body>
-                                <Card.Title>Fatema Mohan</Card.Title>
-                                <p>Medicine Experts</p>
+                                <Card.Title>Private Car</Card.Title>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col>
                         <Card className="p-3 shadow">
 
-                            <p className="text-center mt-1"><Card.Img variant="top" className="rounded" style={{ maxWidth: "250px", height: "200px" }} src="https://www.pngitem.com/pimgs/m/194-1943511_doctors-hd-images-of-doctor-s-hd-png.png" /></p>
+                            <p className="text-center mt-1"><Card.Img variant="top" className="rounded" style={{ maxWidth: "250px", height: "200px" }} src="https://i.ibb.co/D7QCfWs/ac-deluxe-bus-500x500.jpg" /></p>
                             <Card.Body>
-                                <Card.Title>Firoz Ahmed</Card.Title>
-                                <p>Surgery Experts</p>
+                                <Card.Title>A.C Bus</Card.Title>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col>
                         <Card className="p-3 shadow">
 
-                            <p className="text-center mt-1"><Card.Img variant="top" className="rounded" style={{ maxWidth: "250px", height: "200px" }} src="https://www.pngitem.com/pimgs/m/9-93881_doctors-hd-png-transparent-png.png" /></p>
+                            <p className="text-center mt-1"><Card.Img variant="top" className="rounded" style={{ maxWidth: "250px", height: "200px" }} src="https://i.ibb.co/DRpSY0X/hqdefault.jpg" /></p>
                             <Card.Body>
-                                <Card.Title>Shima Khan</Card.Title>
-                                <p>Experts</p>
+                                <Card.Title>Non A.C Bus</Card.Title>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col>
                         <Card className="p-3 shadow">
 
-                            <p className="text-center mt-1"><Card.Img variant="top" className="rounded" style={{ maxWidth: "250px", height: "200px" }} src="https://pngimg.com/uploads/doctor/doctor_PNG15988.png" /></p>
+                            <p className="text-center mt-1"><Card.Img variant="top" className="rounded" style={{ maxWidth: "250px", height: "200px" }} src="https://i.ibb.co/4ZkyfN7/helicopterrrrr-1024x1024.jpg" /></p>
                             <Card.Body>
-                                <Card.Title>Nazrul Islam</Card.Title>
-                                <p>Experts</p>
+                                <Card.Title>Private Helicopter</Card.Title>
                             </Card.Body>
                         </Card>
                     </Col>

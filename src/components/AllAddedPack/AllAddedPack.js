@@ -55,10 +55,10 @@ const AllAddedPack = () => {
                             <Card.Img variant="top" className=" img-fluid" src={pack.image} />
                             <Card.Body>
                                 <Card.Title>{pack.name}</Card.Title>
-                                <p>Add Package</p>
+                                <p>Cost : BDT {pack.cost}</p>
                             </Card.Body>
                             <div className="d-flex justify-content-center">
-                                <button className="btn btn-danger me-3" onClick={() => handleRemove(pack._id)} > Remove Now</button>
+                                <button className="btn btn-danger me-3" onClick={() => handleRemove(pack._id)} > Delete Request</button>
                                 <button className="btn btn-success" onClick={() => handleApproved(pack._id)} > Approve Now</button>
                             </div>
                         </Card>

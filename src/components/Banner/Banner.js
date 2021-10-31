@@ -1,71 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
+import './Banner.css'
 
 const Banner = () => {
-    const [index, setIndex] = useState(0);
+    const history = useHistory();
 
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
+    const handleClick = () => {
+        history.push(`/packages`);
+    }
 
     return (
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item>
-                <img
-                    style={{
-                        width: '100%',
-                        height: '500px'
-
-                    }}
-                    className="d-block w-100"
-                    src="https://i.ibb.co/kygzDmp/photo-1618588507085-c79565432917.jpg"
-                    alt="First slide"
-                />
-                <Carousel.Caption prefix="d-flex text-success">
-                    <div>
-                        <h2>First slide label</h2>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </div>
-
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    style={{
-                        width: '100%',
-                        height: '550px'
-                    }}
-                    className="d-block w-100"
-                    src="https://i.ibb.co/1qSXL1h/pexels-photo-417074.jpg"
-                    alt="Second slide"
-                />
-
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    style={{
-                        width: '100%',
-                        height: '500px'
-                    }}
-                    className="d-block w-100"
-                    src="https://i.ibb.co/dQ9NT9J/photo-1546587348-d12660c30c50.jpg"
-                    alt="Third slide"
-                />
-
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+        <Container fluid >
+            <Row className="d-flex banner align-items-center justify-content-center">
+                <Col sm={12} md={6} lg={6}>
+                </Col>
+                <Col sm={12} md={6} lg={6} className="shadow rounded-3">
+                    <h1 className="title">
+                        SkyTravel <br /> BD's No.1 Travel Agency!
+                    </h1>
+                    <p className="text-white mt-3">
+                        We are proud to partner with over 370 tour operators and destination management companies around the world.
                     </p>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>
+                    <button onClick={handleClick} className="mt-3 contact-btn">Recent Packages</button>
+                </Col>
+            </Row>
+        </Container>
+
+
     );
-}
+};
 
 export default Banner;
