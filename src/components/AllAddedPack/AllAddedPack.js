@@ -5,11 +5,46 @@ const AllAddedPack = () => {
     const [packs, setPacks] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/pack')
+        fetch('https://fathomless-coast-33302.herokuapp.com/pack')
             .then(res => res.json())
             .then(data => setPacks(data))
     }, [])
-
+    const handleRemove = (id) => {
+        const procced = window.confirm('Are You Sure To Remove The Package?');
+        if (procced) {
+            fetch(`https://fathomless-coast-33302.herokuapp.com/pack/${id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.deletedCount > 0) {
+                        alert('Deleted Successfully')
+                        const remainPack = packs.filter(pack => pack._id !== id);
+                        setPacks(remainPack)
+                    } else {
+                        alert('Something Went Wrong')
+                    }
+                });
+        }
+    }
+    const handleApproved = (id) => {
+        const procced = window.confirm('Are You Sure To Approved The Package?');
+        if (procced) {
+            fetch(`https://fathomless-coast-33302.herokuapp.com/pack/${id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.deletedCount > 0) {
+                        alert('Approved Successfully')
+                        const remainPack = packs.filter(pack => pack._id !== id);
+                        setPacks(remainPack)
+                    } else {
+                        alert('Something Went Wrong')
+                    }
+                });
+        }
+    }
 
     return (
         <div>
@@ -22,7 +57,10 @@ const AllAddedPack = () => {
                                 <Card.Title>{pack.name}</Card.Title>
                                 <p>Add Package</p>
                             </Card.Body>
-                            <button className="btn btn-danger" > Booking Now</button>
+                            <div className="d-flex justify-content-center">
+                                <button className="btn btn-danger me-3" onClick={() => handleRemove(pack._id)} > Remove Now</button>
+                                <button className="btn btn-success" onClick={() => handleApproved(pack._id)} > Approve Now</button>
+                            </div>
                         </Card>
                     </Col>
 

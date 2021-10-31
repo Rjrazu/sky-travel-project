@@ -16,14 +16,18 @@ const Banner = () => {
                     style={{
                         width: '100%',
                         height: '500px'
+
                     }}
                     className="d-block w-100"
                     src="https://i.ibb.co/kygzDmp/photo-1618588507085-c79565432917.jpg"
                     alt="First slide"
                 />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <Carousel.Caption prefix="d-flex text-success">
+                    <div>
+                        <h2>First slide label</h2>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>

@@ -6,7 +6,7 @@ import './AddPackage.css'
 const AddPackage = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/packages/add', data)
+        axios.post('https://fathomless-coast-33302.herokuapp.com/packages/add', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

@@ -10,7 +10,7 @@ const Dashboard = () => {
     const [packs, setPacks] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/package/${uid} `)
+        fetch(`https://fathomless-coast-33302.herokuapp.com/package/${uid} `)
             .then(res => res.json())
             .then(data => setPacks(data))
     }, [uid])

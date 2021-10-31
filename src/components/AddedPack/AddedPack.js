@@ -1,29 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
 const AddedPack = (props) => {
     const { _id, name, image } = props.pack;
 
-    const [s_packs, setPack] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/pack')
-            .then(res => res.json())
-            .then(data => setPack(data));
-    }, []);
-
+    // Delete Pack
     const handleDelete = (id) => {
         const procced = window.confirm('Are You Sure To Remove The Package?');
         if (procced) {
-            fetch(`http://localhost:5000/pack/${id}`, {
+            fetch(`https://fathomless-coast-33302.herokuapp.com/pack/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
                 .then((data) => {
                     if (data.deletedCount > 0) {
                         alert('Deleted Successfully')
-                        const remainingPack = s_packs.filter(s_pack => s_pack._id !== id);
-                        setPack(remainingPack);
                     } else {
                         alert('Something Went Wrong')
                     }
@@ -45,9 +36,13 @@ const AddedPack = (props) => {
                     <Card.Img variant="top" className="" style={{ maxWidth: '480px', height: '250px' }} src={image} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
-                        <p>Remove Package {s_packs.length}</p>
+                        <p>Remove Package</p>
                     </Card.Body>
-                    <button className="btn btn-danger" onClick={() => handleDelete(_id)}> Remove Now</button>
+                    <div className="d-flex justify-content-center">
+                        <button className="btn btn-warning me-3" disabled > Pending</button>
+                        <button className="btn btn-danger" onClick={() => handleDelete(_id)}> Cancel</button>
+                    </div>
+
                 </Card>
             </Col>
         </div>

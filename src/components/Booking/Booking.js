@@ -14,14 +14,14 @@ const Booking = () => {
     const newPack = { ...pack, uid }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/packages/${id}`)
+        fetch(`https://fathomless-coast-33302.herokuapp.com/packages/${id}`)
             .then(res => res.json())
             .then(data => setPack(data))
     }, [id]);
 
 
     const handleOrder = (packages) => {
-        axios.post('http://localhost:5000/pack/add', packages)
+        axios.post('https://fathomless-coast-33302.herokuapp.com/pack/add', packages)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
