@@ -1,4 +1,4 @@
-# Heart Care 
+# SKY TRAVEL 
 
 Project Link [Live Firebase Link](https://simple-auth-firebase-6b33e.firebaseapp.com/).
 
@@ -10,7 +10,7 @@ Project Link [Live Firebase Link](https://simple-auth-firebase-6b33e.firebaseapp
 - React Supper Fast Website
 
 
-## About Heart Care
+## About SKY TRAVEL
 
 - SkyTravel was founded in 2021 by Raju Ahmed, our current CEO. Initial program versions were designed to handle group quotes across multiple pax ranges. Peter sensed the potential to support growth in tourism at a time when cheap computing was set to transform the industry. Since then Peter has travelled the world, learning the industry, developing relationships with clients, and building the organization of five offices and 80 people that make up today’s Tour plan team of experts.
 
